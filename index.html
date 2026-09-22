@@ -1,14 +1,301 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/finals/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>itc123finals</title>
-    <script type="module" crossorigin src="/finals/assets/index--PYsuxUL.js"></script>
-    <link rel="stylesheet" crossorigin href="/finals/assets/index-CiyFvUI8.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Programming Activity - Hotel Room Booking</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 30px;
+      color: #222;
+    }
+
+    .activity-sheet {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #222;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .header h2 {
+      margin: 8px 0 0;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    .student-info p {
+      margin: 12px 0;
+    }
+
+    .line {
+      display: inline-block;
+      min-width: 250px;
+      border-bottom: 1px solid #222;
+      margin-left: 8px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+
+    ol, ul {
+      line-height: 1.7;
+    }
+
+    .condition-box {
+      border: 1px solid #bbb;
+      padding: 15px 20px;
+      margin: 15px 0;
+      background: #fafafa;
+    }
+
+    pre {
+      background: #f1f1f1;
+      border-left: 4px solid #444;
+      padding: 15px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+    }
+
+    .note {
+      border: 1px dashed #888;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .activity-sheet {
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="activity-sheet">
+
+  <div class="header">
+    <h1>C Programming Activity</h1>
+    <h2>Nested If-Else Statements</h2>
+  </div>
+
+  <div class="student-info">
+    <p>Name: <span class="line"></span></p>
+    <p>Course/Section: <span class="line"></span></p>
+    <p>Date: <span class="line"></span></p>
+  </div>
+
+  <h3>Activity Title</h3>
+  <p><strong>Hotel Room Booking System</strong></p>
+
+  <h3>Objective</h3>
+  <p>
+    Create a C program that determines whether a hotel can accommodate
+    a guest based on the <strong>number of guests</strong> and the
+    guest's preferred <strong>room type</strong>.
+    The program must use <strong>nested if-else statements</strong>.
+  </p>
+
+  <h3>Scenario</h3>
+  <p>
+    A small hotel offers Standard and Family rooms.
+    The type of room that can be booked depends on the number of guests.
+    Your program will help the receptionist determine which room
+    can accommodate the customer.
+  </p>
+
+  <h3>Instructions</h3>
+
+  <ol>
+    <li>
+      Ask the user to enter the <strong>number of guests</strong>.
+    </li>
+
+    <li>
+      If there are <strong>1 or 2 guests</strong>, ask the customer
+      to select:
+      <ul>
+        <li><strong>1 - Standard Room</strong> — ₱1,500 per night</li>
+        <li><strong>2 - Family Room</strong> — ₱2,500 per night</li>
+      </ul>
+    </li>
+
+    <li>
+      If there are <strong>3 or 4 guests</strong>, only a
+      <strong>Family Room</strong> can accommodate the group.
+    </li>
+
+    <li>
+      If there are <strong>more than 4 guests</strong>,
+      the hotel cannot accommodate the group in a single room.
+    </li>
+
+    <li>
+      Use nested <code>if-else</code> statements to determine
+      the appropriate result.
+    </li>
+  </ol>
+
+  <h3>Program Conditions</h3>
+
+  <div class="condition-box">
+    <strong>1 to 2 Guests</strong>
+
+    <p>
+      Ask the customer to choose a room type.
+    </p>
+
+    <ul>
+      <li>
+        If the customer selects <strong>1</strong>, display:
+        <br>
+        <code>Standard Room booked - P1500 per night.</code>
+      </li>
+
+      <li>
+        If the customer selects <strong>2</strong>, display:
+        <br>
+        <code>Family Room booked - P2500 per night.</code>
+      </li>
+
+      <li>
+        Otherwise, display:
+        <br>
+        <code>Invalid room selection.</code>
+      </li>
+    </ul>
+  </div>
+
+  <div class="condition-box">
+    <strong>3 to 4 Guests</strong>
+
+    <p>
+      Ask the customer if they agree to book a Family Room.
+    </p>
+
+    <ul>
+      <li>Enter <strong>1</strong> for Yes.</li>
+      <li>Enter <strong>0</strong> for No.</li>
+    </ul>
+
+    <p>
+      If the customer agrees, display:
+      <br>
+      <code>Family Room booked - P2500 per night.</code>
+    </p>
+
+    <p>
+      Otherwise, display:
+      <br>
+      <code>Booking cancelled.</code>
+    </p>
+  </div>
+
+  <div class="condition-box">
+    <strong>More Than 4 Guests</strong>
+
+    <p>Display:</p>
+
+    <code>Group cannot be accommodated in a single room.</code>
+  </div>
+
+  <h3>Example Output 1</h3>
+
+  <pre>
+HOTEL ROOM BOOKING SYSTEM
+
+Enter number of guests: 2
+
+Available Rooms:
+1 - Standard Room (P1500)
+2 - Family Room (P2500)
+
+Enter room choice: 1
+
+Standard Room booked - P1500 per night.
+  </pre>
+
+  <h3>Example Output 2</h3>
+
+  <pre>
+HOTEL ROOM BOOKING SYSTEM
+
+Enter number of guests: 4
+
+A Family Room is required.
+Do you want to continue?
+
+1 - Yes
+0 - No
+
+Enter choice: 1
+
+Family Room booked - P2500 per night.
+  </pre>
+
+  <h3>Example Output 3</h3>
+
+  <pre>
+HOTEL ROOM BOOKING SYSTEM
+
+Enter number of guests: 6
+
+Group cannot be accommodated in a single room.
+  </pre>
+
+  <h3>Programming Requirements</h3>
+
+  <ul>
+    <li>The program must be written in C.</li>
+    <li>
+      The program must use <strong>nested if-else statements</strong>.
+    </li>
+    <li>Do not use a <code>switch</code> statement.</li>
+    <li>Use appropriate variables for the required inputs.</li>
+    <li>Display clear and understandable messages to the user.</li>
+    <li>
+      The program should reject a number of guests that is
+      <strong>0 or below</strong> by displaying
+      <code>Invalid number of guests.</code>
+    </li>
+  </ul>
+
+  <div class="note">
+    <strong>Reminder:</strong>
+    Do not ask every question immediately. Some questions should only
+    appear after a previous condition has been satisfied. This is the
+    purpose of using a <strong>nested if-else</strong> structure.
+  </div>
+
+</div>
+
+</body>
 </html>
